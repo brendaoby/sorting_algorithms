@@ -15,6 +15,7 @@ void sort_deck(deck_node_t **deck);
  *         0 if s1 == s2
  *         Negative byte difference if s1 < s2
  */
+
 int _strcmp(const char *s1, const char *s2)
 {
 	while (*s1 && *s2 && *s1 == *s2)
@@ -34,6 +35,7 @@ int _strcmp(const char *s1, const char *s2)
  *
  * Return: The numerical value of the card.
  */
+
 char get_value(deck_node_t *card)
 {
 	if (_strcmp(card->card->value, "Ace") == 0)
@@ -69,6 +71,7 @@ char get_value(deck_node_t *card)
  * insertion_sort_deck_kind - Sort a deck of cards from spades to diamonds.
  * @deck: A pointer to the head of a deck_node_t doubly-linked list.
  */
+
 void insertion_sort_deck_kind(deck_node_t **deck)
 {
 	deck_node_t *iter, *insert, *tmp;
@@ -99,6 +102,7 @@ void insertion_sort_deck_kind(deck_node_t **deck)
  *                             spades to diamonds from ace to king.
  * @deck: A pointer to the head of a deck_node_t doubly-linked list.
  */
+
 void insertion_sort_deck_value(deck_node_t **deck)
 {
 	deck_node_t *iter, *insert, *tmp;
@@ -131,6 +135,7 @@ void insertion_sort_deck_value(deck_node_t **deck)
  *             from spades to diamonds.
  * @deck: A pointer to the head of a deck_node_t doubly-linked list.
  */
+
 void sort_deck(deck_node_t **deck)
 {
 	if (deck == NULL || *deck == NULL || (*deck)->next == NULL)
